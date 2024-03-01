@@ -9,6 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 	    glue = "Stepdefination",
 	    plugin = {"pretty", "html:target/cucumber-reports/login.html"},
 	    dryRun = false
+	    ,tags = ("@ValidLogin")
 
 	    
 	)

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Dell\AppData\Local\Temp\testng-eclipse-797284446\testng-customsuite.xml</span>
+                    <span>C:\Users\Dell\AppData\Local\Temp\testng-eclipse--705550501\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 3 failed,   </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,16 +104,6 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="Test_Runner.LoginPageRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful login with valid credentials&quot;, &quot;User Login&quot;)">runScenario("Successful login with valid credentials", "User Login")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Test_Runner.LoginPageRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Unsuccessful login with invalid credentials&quot;, &quot;User Login&quot;)">runScenario("Unsuccessful login with invalid credentials", "User Login")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Test_Runner.LoginPageRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Unsuccessful login with invalid credentials&quot;, &quot;User Login&quot;)">runScenario("Unsuccessful login with invalid credentials", "User Login")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -145,77 +135,8 @@
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertTrue(Assert.java:56)
 	at org.testng.Assert.assertTrue(Assert.java:66)
-	at Stepdefination.LoginStepDefinitions.the_user_should_be_logged_in_successfully(LoginStepDefinitions.java:84)
-	at ✽.the user should be logged in successfully(file:///C:/Users/Dell/Desktop/Automation/com.affnetz/src/test/java/Feature_files/loginPage.feature:9)
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Unsuccessful login with invalid credentials&quot;, &quot;User Login&quot;)">
-                  </a> <!-- runScenario("Unsuccessful login with invalid credentials", "User Login") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Unsuccessful login with invalid credentials","User Login")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=txtEmail
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;ALEKH&apos;, ip: &apos;192.168.27.237&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.sendKeys(Unknown Source)
-	at Page_Repository.LoginPageRepo.setUserName(LoginPageRepo.java:55)
-	at Stepdefination.LoginStepDefinitions.the_user_enters_a_invalid_username(LoginStepDefinitions.java:118)
-	at ✽.the user enters a invalid username &quot;t1admin&quot;(file:///C:/Users/Dell/Desktop/Automation/com.affnetz/src/test/java/Feature_files/loginPage.feature:17)
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Unsuccessful login with invalid credentials&quot;, &quot;User Login&quot;)">
-                  </a> <!-- runScenario("Unsuccessful login with invalid credentials", "User Login") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Unsuccessful login with invalid credentials","User Login")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=122.0.6261.94)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;ALEKH&apos;, ip: &apos;192.168.27.237&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51226}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d9595d26379c34d9c1c2a6ec7f0c5c25
-*** Element info: {Using=id, value=txtEmail}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.sendKeys(Unknown Source)
-	at Page_Repository.LoginPageRepo.setUserName(LoginPageRepo.java:55)
-	at Stepdefination.LoginStepDefinitions.the_user_enters_a_invalid_username(LoginStepDefinitions.java:118)
-	at ✽.the user enters a invalid username &quot;hgch&quot;(file:///C:/Users/Dell/Desktop/Automation/com.affnetz/src/test/java/Feature_files/loginPage.feature:17)
+	at Stepdefination.LoginStepDefinitions.the_user_should_be_logged_in_successfully(LoginStepDefinitions.java:85)
+	at ✽.the user should be logged in successfully(file:///C:/Users/Dell/git/repository/com.affnetz/src/test/java/Feature_files/loginPage.feature:9)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -227,7 +148,7 @@ Session ID: d9595d26379c34d9c1c2a6ec7f0c5c25
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Dell\AppData\Local\Temp\testng-eclipse-797284446\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Dell\AppData\Local\Temp\testng-eclipse--705550501\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -284,24 +205,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Test_Runner.LoginPageRunner')
-data.setCell(0, 3, 117705);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'runScenario')
-data.setCell(1, 2, 'Test_Runner.LoginPageRunner')
-data.setCell(1, 3, 87709);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'runScenario')
-data.setCell(2, 2, 'Test_Runner.LoginPageRunner')
-data.setCell(2, 3, 2713);
+data.setCell(0, 3, 25793);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 25 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -329,30 +242,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Test_Runner.LoginPageRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@4996c99)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@49c675f0)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Successful login with valid credentials", "User Login")</span>
-                <span class="method-start">762 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("Unsuccessful login with invalid credentials", "User Login")</span>
-                <span class="method-start">118473 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("Unsuccessful login with invalid credentials", "User Login")</span>
-                <span class="method-start">206195 ms</span>
+                <span class="method-start">844 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">208932 ms</span>
+                <span class="method-start">26660 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

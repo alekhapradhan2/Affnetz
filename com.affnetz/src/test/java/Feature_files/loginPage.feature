@@ -3,7 +3,7 @@ Feature: User Login
     @ValidLogin
     Scenario: Successful login with valid credentials
     Given the user is on the login page at "https://t1.affnetz.org/login"
-    When the user enters a valid username "t1admin"
+    When the user enters a valid username "t1admi"
     And the user enters a valid password "%^&$T1Affnetz#$"
     And clicks on the login button
     Then the user should be logged in successfully

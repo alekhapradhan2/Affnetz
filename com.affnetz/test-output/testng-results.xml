@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-29T19:51:39 IST" name="Default suite" finished-at="2024-02-29T19:55:08 IST" duration-ms="209082">
+  <suite started-at="2024-03-01T10:49:27 IST" name="Default suite" finished-at="2024-03-01T10:49:54 IST" duration-ms="26794">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-02-29T19:51:39 IST" name="Default test" finished-at="2024-02-29T19:55:08 IST" duration-ms="209082">
+    <test started-at="2024-03-01T10:49:27 IST" name="Default test" finished-at="2024-03-01T10:49:54 IST" duration-ms="26794">
       <class name="Test_Runner.LoginPageRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" started-at="2024-02-29T19:51:39 IST" name="setUpClass" test-instance-name="Login Functionality" finished-at="2024-02-29T19:51:39 IST" duration-ms="746" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" started-at="2024-03-01T10:49:27 IST" name="setUpClass" test-instance-name="Login Functionality" finished-at="2024-03-01T10:49:28 IST" duration-ms="823" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4996c99]]>
+                <![CDATA[org.testng.TestRunner@49c675f0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" started-at="2024-02-29T19:51:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" test-instance-name="Login Functionality" finished-at="2024-02-29T19:53:37 IST" duration-ms="117705" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" started-at="2024-03-01T10:49:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" test-instance-name="Login Functionality" finished-at="2024-03-01T10:49:54 IST" duration-ms="25793" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -44,120 +44,15 @@ at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
-at Stepdefination.LoginStepDefinitions.the_user_should_be_logged_in_successfully(LoginStepDefinitions.java:84)
-at ✽.the user should be logged in successfully(file:///C:/Users/Dell/Desktop/Automation/com.affnetz/src/test/java/Feature_files/loginPage.feature:9)
+at Stepdefination.LoginStepDefinitions.the_user_should_be_logged_in_successfully(LoginStepDefinitions.java:85)
+at ✽.the user should be logged in successfully(file:///C:/Users/Dell/git/repository/com.affnetz/src/test/java/Feature_files/loginPage.feature:9)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" started-at="2024-02-29T19:53:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" test-instance-name="Login Functionality" finished-at="2024-02-29T19:55:05 IST" duration-ms="87709" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Unsuccessful login with invalid credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Login"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Cannot locate an element using id=txtEmail
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ALEKH', ip: '192.168.27.237', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=txtEmail
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ALEKH', ip: '192.168.27.237', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-at org.openqa.selenium.By$ById.findElement(By.java:188)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.sendKeys(Unknown Source)
-at Page_Repository.LoginPageRepo.setUserName(LoginPageRepo.java:55)
-at Stepdefination.LoginStepDefinitions.the_user_enters_a_invalid_username(LoginStepDefinitions.java:118)
-at ✽.the user enters a invalid username "t1admin"(file:///C:/Users/Dell/Desktop/Automation/com.affnetz/src/test/java/Feature_files/loginPage.feature:17)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" started-at="2024-02-29T19:55:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" test-instance-name="Login Functionality" finished-at="2024-02-29T19:55:07 IST" duration-ms="2713" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Unsuccessful login with invalid credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User Login"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=122.0.6261.94)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ALEKH', ip: '192.168.27.237', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51226}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d9595d26379c34d9c1c2a6ec7f0c5c25
-*** Element info: {Using=id, value=txtEmail}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=122.0.6261.94)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ALEKH', ip: '192.168.27.237', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.94, chrome: {chromedriverVersion: 122.0.6261.69 (81bc525b6a36..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51226}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d9595d26379c34d9c1c2a6ec7f0c5c25
-*** Element info: {Using=id, value=txtEmail}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-at org.openqa.selenium.By$ById.findElement(By.java:188)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy22.sendKeys(Unknown Source)
-at Page_Repository.LoginPageRepo.setUserName(LoginPageRepo.java:55)
-at Stepdefination.LoginStepDefinitions.the_user_enters_a_invalid_username(LoginStepDefinitions.java:118)
-at ✽.the user enters a invalid username "hgch"(file:///C:/Users/Dell/Desktop/Automation/com.affnetz/src/test/java/Feature_files/loginPage.feature:17)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" started-at="2024-02-29T19:55:08 IST" name="tearDownClass" test-instance-name="Login Functionality" finished-at="2024-02-29T19:55:08 IST" duration-ms="101" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" started-at="2024-03-01T10:49:54 IST" name="tearDownClass" test-instance-name="Login Functionality" finished-at="2024-03-01T10:49:54 IST" duration-ms="76" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

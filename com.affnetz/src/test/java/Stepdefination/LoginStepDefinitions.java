@@ -30,9 +30,9 @@ public class LoginStepDefinitions {
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
-		driver.get("https://ymcaorg.affnetz.com/login");
+		driver.get("https://t1.affnetz.org/members");
 	    
 	}
 	
@@ -77,8 +77,9 @@ public class LoginStepDefinitions {
 			{
 				TakesScreenshot ts=(TakesScreenshot)driver;
 				File src=ts.getScreenshotAs(OutputType.FILE);
-				File trg=new File("C:\\Users\\Dell\\Desktop\\Automation\\com.affnetz\\FailedScreenShots\\LoginFun\\validLoginfailed.png");
+				File trg=new File("C:\\Users\\Dell\\git\\repository\\com.affnetz\\FailedScreenShots\\LoginFun\\validLoginfailed.png");
 				FileUtils.copyFile(src, trg);
+				driver.close();
 			}
 			
 			assertTrue(flag);	
@@ -139,6 +140,7 @@ public class LoginStepDefinitions {
 				File src=ts.getScreenshotAs(OutputType.FILE);
 				File trg=new File("C:\\Users\\Dell\\Desktop\\Automation\\com.affnetz\\FailedScreenShots\\LoginFun\\InvalidLoginfailed.png");
 				FileUtils.copyFile(src, trg);
+				driver.close();
 			}
 			
 			assertTrue(flag);
