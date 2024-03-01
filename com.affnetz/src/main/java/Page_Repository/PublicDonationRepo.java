@@ -35,7 +35,7 @@ public class PublicDonationRepo {
 	@FindBy(id = "input-46")
 	private WebElement cityInput;
 	
-	@FindBy(id="input-490")
+	@FindBy(id="input-49")
 	private WebElement stateInput;
 	
 	@FindBy(xpath  = "//div[@role='listbox']")
@@ -62,8 +62,14 @@ public class PublicDonationRepo {
 	@FindBy(xpath="//input[@name='postal']")
 	private WebElement postalInput;
 	
-	@FindBy(xpath = "donate_btn")
+	@FindBy(xpath = "//button[@id='donate_btn']")
 	private WebElement donateButton;
+	
+	@FindBy(xpath = "//p[contains(@class,'af-text-4xl')]")
+	private WebElement donationCofirm;
+	
+	@FindBy(linkText = "Login")
+	private WebElement loginLink;
 	
 	
 	//COnstructor
@@ -89,6 +95,7 @@ public class PublicDonationRepo {
 	
 	public void setUserAddress(String add,String city,String state,String zip) throws InterruptedException
 	{
+		Thread.sleep(1000);
 		addressOne.sendKeys(add);
 		cityInput.sendKeys(city);
 		stateInput.click();
@@ -108,16 +115,19 @@ public class PublicDonationRepo {
 		zipcodeInput.sendKeys(zip);
 	}
 	
-
+	public WebElement getFrame()
+	{
+		return debitcardFrame;
+	}
 	
 	public void setDebitaCardDetails(String cardNo,String expDate,String cvv,String postal)
 	{
-		driver.switchTo().frame(debitcardFrame);
+		
 		debitCardNoInput.sendKeys(cardNo);
 		expDateInput.sendKeys(expDate);
 		cvcInput.sendKeys(cvv);
 		postalInput.sendKeys(postal);
-		driver.switchTo().parentFrame();
+		
 	}
 	public void clickDonateButton() {
 		donateButton.click();
@@ -131,6 +141,16 @@ public class PublicDonationRepo {
 	{
 		String text=donationText.getText();
 		return text;
+	}
+	
+	public String getDonationCfnMsg()
+	{
+		String msg=donationCofirm.getText();
+		return msg;
+	}
+	public void clickLogin()
+	{
+		loginLink.click();
 	}
 }
 

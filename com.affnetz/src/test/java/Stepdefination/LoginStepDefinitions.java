@@ -22,6 +22,7 @@ public class LoginStepDefinitions {
 	
 		public WebDriver driver;
 		public LoginPageRepo lp;
+		int count=1;
 		
 	//........................................Browser Open.........................................................//	
 	
@@ -136,9 +137,12 @@ public class LoginStepDefinitions {
 		} catch (Exception e) {
 			if(flag==false)
 			{
+				
+				String f="FailedScreenShots/LoginFun/InvalidLoginfailed"+count+".png";
+				count++;
 				TakesScreenshot ts=(TakesScreenshot)driver;
 				File src=ts.getScreenshotAs(OutputType.FILE);
-				File trg=new File("FailedScreenShots/LoginFun/InvalidLoginfailed.png");
+				File trg=new File(f);
 				FileUtils.copyFile(src, trg);
 				driver.close();
 			}

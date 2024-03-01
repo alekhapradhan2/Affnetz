@@ -3,7 +3,7 @@ Feature: User Login
     @ValidLogin
     Scenario: Successful login with valid credentials
     Given the user is on the login page at "https://t1.affnetz.org/login"
-    When the user enters a valid username "t1admi"
+    When the user enters a valid username "t1admin"
     And the user enters a valid password "%^&$T1Affnetz#$"
     And clicks on the login button
     Then the user should be logged in successfully
@@ -22,6 +22,6 @@ Feature: User Login
     
     Examples:
 		|uname|pwd|
-		|t1admin|ghhgdh|
-		|hgch|%^&$T1Affnetz#$|
+		|t1admin|%^&$T1A|
+		|t1a|%^&$T1Affnetz#$|
  
