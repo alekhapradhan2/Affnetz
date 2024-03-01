@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-01T10:49:27 IST" name="Default suite" finished-at="2024-03-01T10:49:54 IST" duration-ms="26794">
+  <suite started-at="2024-03-01T13:29:21 IST" name="Default suite" finished-at="2024-03-01T13:30:58 IST" duration-ms="97101">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Test_Runner.PublicDonationRunner@45099dd3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-03-01T10:49:27 IST" name="Default test" finished-at="2024-03-01T10:49:54 IST" duration-ms="26794">
-      <class name="Test_Runner.LoginPageRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" started-at="2024-03-01T10:49:27 IST" name="setUpClass" test-instance-name="Login Functionality" finished-at="2024-03-01T10:49:28 IST" duration-ms="823" status="PASS">
+    <test started-at="2024-03-01T13:29:21 IST" name="Default test" finished-at="2024-03-01T13:30:58 IST" duration-ms="97101">
+      <class name="Test_Runner.PublicDonationRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Test_Runner.PublicDonationRunner@45099dd3]" started-at="2024-03-01T13:29:21 IST" name="setUpClass" test-instance-name="Public Donation" finished-at="2024-03-01T13:29:22 IST" duration-ms="770" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@49c675f0]]>
+                <![CDATA[org.testng.TestRunner@36bf84e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" started-at="2024-03-01T10:49:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" test-instance-name="Login Functionality" finished-at="2024-03-01T10:49:54 IST" duration-ms="25793" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Test_Runner.PublicDonationRunner@45099dd3]" started-at="2024-03-01T13:29:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" test-instance-name="Public Donation" finished-at="2024-03-01T13:30:58 IST" duration-ms="96124" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Successful login with valid credentials"]]>
+                <![CDATA["Check public donation with valid inputs"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User Login"]]>
+                <![CDATA["Public Donation"]]>
               </value>
             </param>
           </params>
@@ -44,19 +44,19 @@ at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
-at Stepdefination.LoginStepDefinitions.the_user_should_be_logged_in_successfully(LoginStepDefinitions.java:85)
-at ✽.the user should be logged in successfully(file:///C:/Users/Dell/git/repository/com.affnetz/src/test/java/Feature_files/loginPage.feature:9)
+at Stepdefination.PublicDonation.the_use_should_re_direct_to_public_donation_page(PublicDonation.java:62)
+at ✽.the use should re-direct to public donation page(file:///C:/Users/Dell/git/repository/com.affnetz/src/test/java/Feature_files/publicDonation.feature:8)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Test_Runner.LoginPageRunner@45099dd3]" started-at="2024-03-01T10:49:54 IST" name="tearDownClass" test-instance-name="Login Functionality" finished-at="2024-03-01T10:49:54 IST" duration-ms="76" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Test_Runner.PublicDonationRunner@45099dd3]" started-at="2024-03-01T13:30:58 IST" name="tearDownClass" test-instance-name="Public Donation" finished-at="2024-03-01T13:30:58 IST" duration-ms="104" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- Test_Runner.LoginPageRunner -->
+      </class> <!-- Test_Runner.PublicDonationRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -77,7 +77,7 @@ public class LoginStepDefinitions {
 			{
 				TakesScreenshot ts=(TakesScreenshot)driver;
 				File src=ts.getScreenshotAs(OutputType.FILE);
-				File trg=new File("C:\\Users\\Dell\\git\\repository\\com.affnetz\\FailedScreenShots\\LoginFun\\validLoginfailed.png");
+				File trg=new File("FailedScreenShots/LoginFun/validLoginfailed.png");
 				FileUtils.copyFile(src, trg);
 				driver.close();
 			}
@@ -138,7 +138,7 @@ public class LoginStepDefinitions {
 			{
 				TakesScreenshot ts=(TakesScreenshot)driver;
 				File src=ts.getScreenshotAs(OutputType.FILE);
-				File trg=new File("C:\\Users\\Dell\\Desktop\\Automation\\com.affnetz\\FailedScreenShots\\LoginFun\\InvalidLoginfailed.png");
+				File trg=new File("FailedScreenShots/LoginFun/InvalidLoginfailed.png");
 				FileUtils.copyFile(src, trg);
 				driver.close();
 			}
