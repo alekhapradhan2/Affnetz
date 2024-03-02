@@ -4,17 +4,21 @@ import static org.testng.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
-
+import java.util.List;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
+import Page_Repository.DashboardRepo;
 import Page_Repository.LoginPageRepo;
 import Page_Repository.PublicDonationRepo;
 import io.cucumber.java.en.Given;
@@ -28,7 +32,11 @@ public class PublicDonation {
 	public WebDriver driver;
 	public PublicDonationRepo pd;
 	public LoginPageRepo lp;
+	public DashboardRepo db;
 	
+	String donorName,Email,phNo,Amount;
+	Random rm=new Random();
+	int x=rm.nextInt(1000);
 	
 	
 	@Given("the user is open public donation page")
@@ -38,7 +46,9 @@ public class PublicDonation {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
-		driver.get("https://t1.affnetz.org/donate");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-notifications");
+		driver.get("https://sandyuat.affnetz.org/donate");
 	}
 	@Then("the use should re-direct to public donation page")
 	public void the_use_should_re_direct_to_public_donation_page() throws IOException {
@@ -66,14 +76,23 @@ public class PublicDonation {
 	   
 	}
 	@When("i give user details {string} {string} {string} {string}")
-	public void i_give_user_details(String string, String string2, String string3, String string4) {
+	public void i_give_user_details(String fname, String lname, String No, String mailid) {
+		fname=fname+x;
+		lname=lname+x;
+		mailid=mailid+x+"@affnetz.com";
 		pd=new PublicDonationRepo(driver);
-		pd.setUserDetails(string, string2, string3, string4);
+		donorName=fname+" "+lname;
+		phNo=No;
+		Email=mailid;
+		
+		pd.setUserDetails(fname, lname, No, mailid);
 	}
 	@When("i give donation amount {string}")
-	public void i_give_donation_amount(String string) {
+	public void i_give_donation_amount(String donateAmount) {
+		donateAmount=donateAmount+x;
 		pd=new PublicDonationRepo(driver);
-		pd.setDonationAmount(string);
+		Amount=donateAmount;
+		pd.setDonationAmount(donateAmount);
 	}
 	@When("i give user address details {string} {string} {string} {string}")
 	public void i_give_user_address_details(String string, String string2, String string3, String string4) throws InterruptedException {
@@ -123,16 +142,51 @@ public class PublicDonation {
 			}
 			assertTrue(flag);
 		}
-	}
-	@Then("the donor name should display to admin")
-	public void the_donor_name_should_display_to_admin() {
+	}	
+	@Then("i login as a aadmin")
+	public void i_login_as_a_aadmin() {
 		pd=new PublicDonationRepo(driver);
 		pd.clickLogin();
 		lp=new LoginPageRepo(driver);
-		lp.setUserName("t1admin");
-		lp.setPassword("%^&$T1Affnetz#$");
+		lp.setUserName("engineering+uat@affnetz.com");
+		lp.setPassword("Af15@UAt#@#$");
 		lp.clickLoginButton();
-	   
 	}
-
+	
+	@Then("the donation details should display to admin correctly")
+	public void the_donation_details_should_display_to_admin_correctly() throws IOException, InterruptedException {
+	  db=new DashboardRepo(driver);
+	  db.clickMonthDonorList();
+//	  db.setNewDonorName(donorName);
+//	  db.clickOnSearchButton();
+	  
+	  db.clickOnSortingList();
+	  Thread.sleep(2000);
+	  List<WebElement> list=db.getsortingList();
+	  list.get(2).click();
+	  Thread.sleep(3000);
+	  boolean flag=false;	
+	 
+			
+			List<WebElement> row=db.getDonorTable().findElements(By.tagName("tr"));
+			for(int i=1;i<row.size();i++)
+			{
+				  List<WebElement> col=row.get(i).findElements(By.tagName("td"));
+				  String name=col.get(0).getText();
+				  String mail=col.get(1).getText();
+				  String amount=col.get(4).getText();
+				  if(name.equals(donorName) )
+				  {
+					  flag=true;
+					  
+				  }
+				  
+			  }
+			assertTrue(flag, "Donor Name Found");
+	  	
+		  
+	  
+	  
+	  
+	}
 }
