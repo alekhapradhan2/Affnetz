@@ -158,7 +158,7 @@ public class PublicDonation {
 	   boolean flag=false;
 	   if(url.contains("donate/download-invoice"))
 	   {
-		   TakesScreenshot ts=(TakesScreenshot)driver;
+		    TakesScreenshot ts=(TakesScreenshot)driver;
 			File src=ts.getScreenshotAs(OutputType.FILE);
 			File trg=new File("FailedScreenShots/LoginFun/donateReceipt.png");
 			FileUtils.copyFile(src, trg);
@@ -206,6 +206,18 @@ public class PublicDonation {
 				  
 			  }
 			assertTrue(flag, "Donor Name Found"); 
+			
+			if(flag==true)
+			{
+				db.setNewDonorName(donorName);
+				db.clickOnSearchButton();
+				Thread.sleep(3000);
+				TakesScreenshot ts=(TakesScreenshot)driver;
+				File src=ts.getScreenshotAs(OutputType.FILE);
+				File trg=new File("FailedScreenShots/LoginFun/donorDetailsDisplay.png");
+				FileUtils.copyFile(src, trg);
+				
+			}
 	}
 	
 	@Then("i logout from the page")

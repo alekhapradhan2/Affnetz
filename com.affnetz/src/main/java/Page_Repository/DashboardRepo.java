@@ -18,7 +18,7 @@ public class DashboardRepo {
 	@FindBy(xpath = "//a[contains(@href,'donations-repor')]")
 	private WebElement donationReport;
 	
-	@FindBy(id = "input-70")
+	@FindBy(id = "input-72")
 	private WebElement searchNewDonor;
 	
 	@FindBy(xpath = "//span[contains(text(),'SEARCH')]")
