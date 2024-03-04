@@ -48,7 +48,8 @@ public class PublicDonation {
 		driver.manage().deleteAllCookies();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
-		driver.get("https://sandyuat.affnetz.org/donate");
+		String url="https://t1.affnetz.org/donate";
+		driver.get(url);
 	}
 	@Then("the use should re-direct to public donation page")
 	public void the_use_should_re_direct_to_public_donation_page() throws IOException {
@@ -142,14 +143,38 @@ public class PublicDonation {
 			}
 			assertTrue(flag);
 		}
-	}	
+		
+	}
+	
+	@When("user click on Receipt download link")
+	public void user_click_on_receipt_download_link() {
+		pd=new PublicDonationRepo(driver);
+		pd.clickOnReceiptDownload();
+	}
+	@Then("user should see the donation receipt")
+	public void user_should_see_the_donation_receipt() throws IOException, InterruptedException {
+	   Thread.sleep(3000);
+	   String url=driver.getCurrentUrl();
+	   boolean flag=false;
+	   if(url.contains("donate/download-invoice"))
+	   {
+		   TakesScreenshot ts=(TakesScreenshot)driver;
+			File src=ts.getScreenshotAs(OutputType.FILE);
+			File trg=new File("FailedScreenShots/LoginFun/donateReceipt.png");
+			FileUtils.copyFile(src, trg);
+			
+			flag=true;
+	   }
+	   assertTrue(flag);
+	  
+	}
 	@Then("i login as a aadmin")
 	public void i_login_as_a_aadmin() {
-		pd=new PublicDonationRepo(driver);
-		pd.clickLogin();
+			
+		driver.get("https://t1.affnetz.org/login");
 		lp=new LoginPageRepo(driver);
-		lp.setUserName("engineering+uat@affnetz.com");
-		lp.setPassword("Af15@UAt#@#$");
+		lp.setUserName("t1admin");
+		lp.setPassword("%^&$T1Affnetz#$");
 		lp.clickLoginButton();
 	}
 	

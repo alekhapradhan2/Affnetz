@@ -12,6 +12,8 @@ Feature: Public Donation
     And i give payment details "4242 4242 4242 4242" "4242" "444" "88888"
     When i click donate button
     Then the form should submit and show cofirm message and user should download the receipt
+    When user click on Receipt download link 
+    Then user should see the donation receipt
     And i login as a aadmin
     Then the donation details should display to admin correctly
     

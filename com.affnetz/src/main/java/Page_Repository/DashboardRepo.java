@@ -30,7 +30,7 @@ public class DashboardRepo {
 	@FindBy(xpath = "//div[@class='v-select__selections']")
 	private WebElement sortingClick;
 	
-	@FindBy(xpath ="//div[contains(@id,'list-item-114')]" )
+	@FindBy(xpath ="//div[contains(@id,'list-item-116')]" )
 	private List<WebElement> sortingList;
 	//COnstructor
 	

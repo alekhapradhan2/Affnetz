@@ -71,6 +71,8 @@ public class PublicDonationRepo {
 	@FindBy(linkText = "Login")
 	private WebElement loginLink;
 	
+	@FindBy(xpath = "//a[contains(@href,'download-invoice')]")
+	private WebElement recepitDownload;
 	
 	//COnstructor
 	public PublicDonationRepo(WebDriver driver)
@@ -151,6 +153,11 @@ public class PublicDonationRepo {
 	public void clickLogin()
 	{
 		loginLink.click();
+	}
+	
+	public void clickOnReceiptDownload()
+	{
+		recepitDownload.click();
 	}
 }
 
