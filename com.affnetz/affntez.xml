@@ -1,0 +1,15 @@
+<suite name="Affnetz Test Suite">
+
+	<test name="Login functionality">
+		<classes>
+			<class name="Test_Runner.LoginPageRunner"></class>
+		</classes>
+	</test>
+
+	<test name="Public Donation Functionality">
+		<classes>
+			<class name="Test_Runner.PublicDonationRunner"></class>
+		</classes>
+	</test>
+
+</suite>
