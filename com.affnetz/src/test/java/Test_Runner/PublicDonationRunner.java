@@ -9,10 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 	    features = "src/test/java/Feature_files/publicDonation.feature",
 	    glue = "Stepdefination",
 	    plugin = {"pretty", "html:target/cucumber-reports/login.html"},
-	    dryRun = false
-	   
-
-	    
+	    dryRun = false   
 	)
 
 @Test(testName = "Public Donation")

@@ -41,7 +41,7 @@ public class PublicDonation {
 	
 	@Given("the user is open public donation page")
 	public void the_user_is_open_public_donation_page() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -198,8 +198,6 @@ public class PublicDonation {
 			{
 				  List<WebElement> col=row.get(i).findElements(By.tagName("td"));
 				  String name=col.get(0).getText();
-				  String mail=col.get(1).getText();
-				  String amount=col.get(4).getText();
 				  if(name.equals(donorName) )
 				  {
 					  flag=true;
@@ -207,11 +205,16 @@ public class PublicDonation {
 				  }
 				  
 			  }
-			assertTrue(flag, "Donor Name Found");
-	  	
-		  
-	  
-	  
-	  
+			assertTrue(flag, "Donor Name Found"); 
+	}
+	
+	@Then("i logout from the page")
+	public void i_logout_from_the_page() {
+		lp=new LoginPageRepo(driver);
+		lp.getlogoutButton().click();
+	}
+	@Then("close the browser")
+	public void close_the_browser() {
+	 driver.close();
 	}
 }

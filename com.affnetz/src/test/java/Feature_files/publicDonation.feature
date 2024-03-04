@@ -16,6 +16,8 @@ Feature: Public Donation
     Then user should see the donation receipt
     And i login as a aadmin
     Then the donation details should display to admin correctly
+    And i logout from the page
+    And close the browser
     
 
  

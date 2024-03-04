@@ -28,7 +28,7 @@ public class LoginStepDefinitions {
 	
 	@Given("the user is on the login page at {string}")
 	public void the_user_is_on_the_login_page_at(String string) {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

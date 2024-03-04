@@ -22,6 +22,6 @@ Feature: User Login
     
     Examples:
 		|uname|pwd|
-		|t1admin|%^&$T1A|
-		|t1a|%^&$T1Affnetz#$|
+		|t1admin|jhcvjhc|
+		|jhvcjvjh|%^&$T1Affnetz#$|
  
